@@ -43,6 +43,45 @@ let newArray;
 //testes 25;98;54;12;0;1;2;6;4;71;5;30;20;84;4    1;2;2;5;4;1;2;6;4;1;2
 
 
+
+/*function quantitativaContinua(array) {
+  let novoArray = array.split(';')
+
+  novoArray.sort((a, b) => a - b);
+
+  let at = novoArray[novoArray.length - 1] - novoArray[0]
+  let k = Math.floor(Math.sqrt(novoArray.length))
+  let cont, aux
+
+
+  do {
+    at++
+    
+    if( at % k == 0){
+      aux = at/k
+    } else if( at % (k-1) == 0){
+      aux = at / (k-1)
+      k--
+    } else if ( at % (k+1) == 0){
+      aux = at / (k+1)
+      k++
+    }
+
+
+  } while (aux == '')
+
+
+
+
+
+}*/
+
+
+
+
+
+
+
 function qualitativeFunc(name, array){
 
   //testes branco;azul;preto;preto;branco;branco;negro;azul;amarelo;yellow
@@ -50,6 +89,20 @@ function qualitativeFunc(name, array){
   newArray = array.split(";")
 
   let sortArray = newArray.sort() 
+
+  let mediana
+  let somaMediana = (sortArray.length/2)-1
+  if(sortArray.length % 2 == 0 ){
+     mediana = [sortArray[somaMediana], sortArray[somaMediana+1]]
+  }else{
+  
+  
+ 
+ somaMediana = Math.trunc(somaMediana)
+  mediana = sortArray[somaMediana]
+  }
+
+
 
   console.log(sortArray)
 
@@ -71,13 +124,17 @@ function qualitativeFunc(name, array){
     
     // console.log(`Elemento = ${sortArray[i]}; frequencia = ${freqCont}`);
   }
+  let maior = Math.max.apply(null, freqArray)
+  let indiceMaior = (freqArray.indexOf(maior))
+ 
 
-
+let media = "Não há"
 
 let filteredArray = sortArray.filter((este, i) => sortArray.indexOf(este) === i)
+let moda = filteredArray[indiceMaior]
 console.log(filteredArray)
 
-writeTable(filteredArray, freqArray,facArray, sortArray) // chamada da função de escrever tabela
+writeTable(filteredArray, freqArray,facArray, sortArray, moda, media, mediana) // chamada da função de escrever tabela
 
 
 
@@ -91,10 +148,29 @@ writeTable(filteredArray, freqArray,facArray, sortArray) // chamada da função 
 
 
 function quantitativeFunc(name, array) {  //falta adicionar o nome, mas isso é o de menos
+
   document.getElementById('headVar').innerText = name
   newArray = array.split(";").map(x => parseFloat(x));  //separa o array por ";" e com map() passa tudo para Number float
+  let soma = newArray.reduce((acumulado, n) => acumulado + n)
 
   let sortArray = newArray.sort((a, b) => a - b); //function que o Glenio me passou para ordernar o vetor por ordem crescente
+  
+  //mediana 
+
+let mediana
+    let somaMediana = (sortArray.length/2)-1
+    if(sortArray.length % 2 == 0 ){
+       mediana = [sortArray[somaMediana], sortArray[somaMediana+1]]
+    }else{
+    
+    
+   
+   somaMediana = Math.trunc(somaMediana)
+    mediana = sortArray[somaMediana]
+    }
+  
+
+
   let freqArray = [], facArray = [] 
   let x, fac = 0
   for (let i = 0; i < sortArray.length; i = x) {  //função que compara um item do vetor com outro e caso for true, adiciona um contador para fazer frequencia normal
@@ -114,7 +190,18 @@ function quantitativeFunc(name, array) {  //falta adicionar o nome, mas isso é 
     // console.log(`Elemento = ${sortArray[i]}; frequencia = ${freqCont}`);
   }
 
-  let filteredArray = sortArray.filter((este, i) => sortArray.indexOf(este) === i); // função que filtra o vetor para tirar todos números repetidos
+  // moda -------------
+
+  let maior = Math.max.apply(null, freqArray)
+  let indiceMaior = (freqArray.indexOf(maior))
+ 
+
+
+
+  let filteredArray = sortArray.filter((este, i) => sortArray.indexOf(este) === i); // função que filtra o vetor para tirar todos números repetidos 
+
+  let media = soma/newArray.length
+  let moda = filteredArray[indiceMaior]
   /*console.log(sortArray);
   console.log(freqArray);*/
 
@@ -122,7 +209,7 @@ function quantitativeFunc(name, array) {  //falta adicionar o nome, mas isso é 
 
 
 
-writeTable(filteredArray, freqArray,facArray, sortArray) // chamada da função de escrever tabela
+writeTable(filteredArray, freqArray,facArray, sortArray, moda, media, mediana) // chamada da função de escrever tabela
 
   }
 
@@ -143,7 +230,7 @@ writeTable(filteredArray, freqArray,facArray, sortArray) // chamada da função 
 
 // teste para git
 
-function writeTable(element, freq , fac, array) { //função para escrever na tabela
+function writeTable(element, freq , fac, array, moda, media, mediana) { //função para escrever na tabela
 
 
   function freqIpercent(repetition , array){ // função de frequencia normal porcento
@@ -156,7 +243,10 @@ function writeTable(element, freq , fac, array) { //função para escrever na ta
   }  
 
  
+  document.getElementById('moda').innerHTML = "Moda: " + moda
+  document.getElementById('media').innerHTML = "Média: " + media
 
+  document.getElementById('mediana').innerHTML = "Mediana: " + mediana
 
   for (let i = 0; i < element.length; i++) { //escreve a tabela
     var linha = document.createElement("tr");
