@@ -40,8 +40,6 @@ document.querySelector("#add-data").addEventListener("click", function() {
 });
 let newArray;
 
-//testes 25;98;54;12;0;1;2;6;4;71;5;30;20;84;4    1;2;2;5;4;1;2;6;4;1;2
-
 
 
 /*function quantitativaContinua(array) {
@@ -84,7 +82,13 @@ let newArray;
 
 function qualitativeFunc(name, array){
 
-  //testes branco;azul;preto;preto;branco;branco;negro;azul;amarelo;yellow
+
+
+  //testes branco;azul;preto;preto;branco;branco;vermelho;azul;amarelo;verde
+
+  if(name == ''){
+    name = 'Nome não escolhido'
+  }
   document.getElementById('headVar').innerText = name
   newArray = array.split(";")
 
@@ -136,6 +140,53 @@ console.log(filteredArray)
 
 writeTable(filteredArray, freqArray,facArray, sortArray, moda, media, mediana) // chamada da função de escrever tabela
 
+//-----------------grafico----------------//
+let chart = new Chart(document.getElementById('myChart'), {
+  //tipo de gráfico
+  type: 'pie',
+
+  // dados pro dataset
+  data: {
+      labels: filteredArray,
+      datasets: [{
+          label: '%',
+          backgroundColor: 
+          ['rgb(255,99,132, 0.5)',                
+          'rgba(54, 162, 235, 0.5)',
+          'rgba(255, 206, 86, 0.5)',
+          'rgba(75, 192, 192, 0.5)',
+          'rgba(153, 102, 255, 0.5)',
+          'rgba(25, 159, 64, 0.5)',
+          //-------------------//
+          'rgb(25,9,132, 0.5)',                
+          'rgba(54, 150, 35, 0.5)',
+          'rgba(55, 206, 6, 0.5)',
+          'rgba(75, 92, 12, 0.5)',
+          'rgba(13, 102, 25, 0.5)',
+          'rgba(55, 59, 64, 0.5)'
+        ],
+          borderColor: '#000',
+          data: freqIpercentArray,
+          borderWidth: 0.5
+      }]
+  },
+  options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    title: {
+      display: true,
+      text: name
+  }
+
+}
+}          )
+
+
 
 
 }
@@ -149,6 +200,12 @@ writeTable(filteredArray, freqArray,facArray, sortArray, moda, media, mediana) /
 
 function quantitativeFunc(name, array) {  //falta adicionar o nome, mas isso é o de menos
 
+//testes 25;98;54;12;0;1;2;6;4;71;5;30;20;84;4    1;2;2;5;4;1;2;6;4;1;2
+
+
+  if(name == ''){
+    name = 'Nome não escolhido'
+  }
   document.getElementById('headVar').innerText = name
   newArray = array.split(";").map(x => parseFloat(x));  //separa o array por ";" e com map() passa tudo para Number float
   let soma = newArray.reduce((acumulado, n) => acumulado + n)
@@ -173,7 +230,7 @@ let mediana
 
   let freqArray = [], facArray = [] 
   let x, fac = 0
-  for (let i = 0; i < sortArray.length; i = x) {  //função que compara um item do vetor com outro e caso for true, adiciona um contador para fazer frequencia normal
+  for (let i = 0; i < sortArray.length; i = x) {  // função que compara um item do vetor com outro e caso for true, adiciona um contador para fazer frequencia normal
     let freqCont = 1;
 
     for (x = i + 1; x < sortArray.length; x++) {
@@ -206,10 +263,57 @@ let mediana
   console.log(freqArray);*/
 
  //let freqTotal = accumulate(freqArray)
-
-
-
 writeTable(filteredArray, freqArray,facArray, sortArray, moda, media, mediana) // chamada da função de escrever tabela
+
+
+
+ //--------------------grafico----------------//
+
+          let chart = new Chart(document.getElementById('myChart'), {
+            //tipo de gráfico
+            type: 'bar',
+
+            // dados pro dataset
+            data: {
+                labels: filteredArray,
+                datasets: [{
+                    label: '%',
+                    backgroundColor: ['rgb(255,99,132)',                
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgb(25,9,132, 0.5)',                
+                    'rgba(54, 150, 35, 0.5)',
+                    'rgba(55, 206, 6, 0.5)',
+                    'rgba(75, 92, 12, 0.5)',
+                    'rgba(13, 102, 25, 0.5)',
+                    'rgba(55, 59, 64, 0.5)'
+                  
+                  ],
+                    borderColor: 'rgb(255,99,132)',
+                    data: freqIpercentArray,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero: true
+                      }
+                  }]
+              },
+              title: {
+                display: true,
+                text: name
+            }
+
+          }
+          }          )
+
+
 
   }
 
@@ -226,21 +330,29 @@ writeTable(filteredArray, freqArray,facArray, sortArray, moda, media, mediana) /
   }
 
 //  writeTable(sortArray, freqArray);
-  
+function freqIpercent(repetition , array){ // função de frequencia normal porcento
+  let aux = repetition / array.length
+  let percentual = aux * 100
+  freqIpercentArray.push(percentual.toFixed(0))
+  freqIpercentArray = freqIpercentArray.map(x => parseFloat(x)) // conversão para number
+ // return percentualFixed
+
+}  
 
 // teste para git
 
 function writeTable(element, freq , fac, array, moda, media, mediana) { //função para escrever na tabela
 
 
-  function freqIpercent(repetition , array){ // função de frequencia normal porcento
+  /*function freqIpercent(repetition , array){ // função de frequencia normal porcento
     let aux = repetition / array.length
     let percentual = aux * 100
     freqIpercentArray.push(percentual.toFixed(0))
     freqIpercentArray = freqIpercentArray.map(x => parseFloat(x)) // conversão para number
    // return percentualFixed
 
-  }  
+  }  */
+
 
  
   document.getElementById('moda').innerHTML = "Moda: " + moda
@@ -279,9 +391,9 @@ function writeTable(element, freq , fac, array, moda, media, mediana) { //funç�
 
     coluna1.innerText = element[i]
     coluna2.innerText = freq[i]
-    coluna3.innerText = freqIpercentArray[i]
+    coluna3.innerText = freqIpercentArray[i] + '%'
     coluna4.innerText = fac[i]
-    coluna5.innerText = acmFreq
+    coluna5.innerText = acmFreq + '%'
     
     //let coluna2 = document.getElementsByClassName('coluna2')
     //coluna1.innerT = element
@@ -309,3 +421,5 @@ function writeTable(element, freq , fac, array, moda, media, mediana) { //funç�
         document.getElementById('col').appendChild(col1)
         //document.getElementById('col').appendChild(col2) }*/
 }
+
+
