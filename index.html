@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td,
+      tbody,
+      tr {
+        border: 1px solid black;
+      }
+    </style>
+    <script src='https://cdn.jsdelivr.net/npm/chart.js@2.8.0'></script>
+
+  </head>
+  <body>
+    <header style="width: 200px; margin: 0">
+      <a  href="">Início</a>
+      <a href="">Sobre</a>
+      <a href="">Equipe</a>
+    </header>
+
+    <label for="">Nome da variável</label>
+    <input type="text" id="var-name" /> <br /><br />
+    <label for="">Dados (separados por ";"):</label>
+    <input type="text" id="dataInput" />
+    <input type="button" value="Adicionar" id="add-data" />
+    <p>
+      <select id="type">
+        <option value="quantitativa" id="quantitative">Quantitativa</option>
+        <option value="qualitativa" id="qualitative">Qualitativa</option>
+      </select>
+      <select id='type02'>
+        <option value="discreta" id="discreta">Discreta</option>
+        <option value="continua" id="continua">Contínua</option>
+
+      </select>
+    </p>
+
+    <br />
+    <br />
+
+    <div id="media"> Média: </div>
+    <div id="moda"> Moda: </div>
+    <div id="mediana"> Mediana: </div>
+    
+    <div class="table">
+      <table>
+        <thead>
+          <tr id='cabecalho'>
+            <th id="headVar"></th>
+            <th>Frequência simples</th>
+            <th>Frequência simples %</th>
+            <th>Frequência acumulada</th>
+            <th>Frequência acumulada %</th>
+          </tr>
+        </thead>
+
+        <tbody id="col">
+          <!--<tr id="linha">
+            <td class="coluna1">12</td>
+            <td class="coluna2">13</td>
+            <td class="coluna3">14</td>
+            <td class="coluna4">15</td>
+            <td class="coluna5">16</td>
+          </tr>-->
+        </tbody>
+      </table>
+    </div>
+
+    <div style="width: 500px; height: 250px;">
+      <canvas id="myChart"></canvas>
+      </div>
+
+
+    <script src="/js/index.js"></script>
+  </body>
+</html>
