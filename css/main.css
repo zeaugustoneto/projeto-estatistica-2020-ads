@@ -1,0 +1,328 @@
+
+/*
+Trabalho para o 3º Ciclo de Análise e Desenvolvimento de Sistemas.
+Calculadora Estatística
+Fatec - Franca/SP
+Alunos:
+    JOSE AUGUSTO SOARES DE SOUZA NETO;
+    LUÍS GUSTAVO GIANVECCHIO SANTOS;
+    MARCELO LEMOS DE MELO;
+    RAFAEL RONALD FREITAS PAULINO;
+    RAFAEL KHODOR RESENDE;
+    VINICIUS GOMES DE SOUZA.">
+* 24/11/2020
+*/
+
+/*
+- Campos de dados;
+- Campos de dados;
+- Seções;
+- Tabela e gráficos;
+- Media queries
+*/
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+/*Seções*/
+
+.categories {
+    margin-top: 60px;
+    width: 100%;
+    background-color: #000;
+    height: 80px;
+    position: relative;
+}
+
+.logo {
+    float: left;
+    padding: 20px;
+    width: 30%;
+}
+
+.categories-titulo {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto ;
+    margin-top: 20px;
+    color: gray;
+}
+
+.categories-titulo2 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    color: gray;
+}
+
+.categories-titulo3 h3 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-stretch: semi-expanded;
+}
+
+/*Ajustes do menu*/
+
+.fundo-menu {
+    background-color: #20aec5;
+    color: white;
+    padding: 0px 0px 0px 30px;
+}
+
+.menu {
+    padding: 0px 0px 0px 30px;
+}
+
+.submenu {
+    padding: 0px 0px 0px 60px;
+}
+
+/*Ajustes da calculadora*/
+
+.caculadora-btn {
+    width: 100%;
+    display: inline-block;
+    left: 0;
+}
+
+.descritiva-btn {
+    width: 100%;
+    display: inline-block;
+    left: 0;
+}
+
+.descritiva-btn li {
+    background-color: green;
+}
+
+.uniforme-btn {
+    width: 100%;
+    display: inline-block;
+    left: 0;
+}
+
+.normal-btn {
+    width: 100%;
+    display: inline-block;
+    left: 0;
+}
+
+.binomial-btn {
+    width: 100%;
+    display: inline-block;
+    left: 0;
+}
+
+.categories-inferencial {
+    width: 100%;
+    display: inline-block;
+    left: 0;
+}
+
+.regressao-btn {
+    width: 100%;
+    display: inline-block;
+    left: 0;
+}
+
+/*Campos de dados*/
+
+.eDados, .eAmostra, .eSucesso, .eFracasso, .eDesvio, .eIntervalo, .pMinimo, .pMaximo,
+.coleta, .tipo, .separatriz, .button, .vIntervalo, .eMedia, .eEvento, .valorY, .valorX,
+.button-primary, .button-personalizado, .limpar, .medidas, .categories-resultados, .resultados-totais {
+    width: 100%;
+    display: inline-block;
+    left: 0;
+}
+
+.resultado_dist {
+    text-align: center;
+    font-size: 25px;
+}
+
+.nome {
+    width: 70%;
+}
+
+.cRegressao {
+    width: 100%;
+    display: inline-block;
+    left: auto;
+    right: auto;
+    text-align: center;
+}
+
+.textoDadosCr {
+    width: 50%;
+}
+
+/*Tabela e Gráficos*/
+
+table.resultados-tab {
+    border-collapse: collapse;
+    background: #FFFFF0;
+    border: solid green 1px;
+    width: 90% !important;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+ 
+table.resultados-tab tr {
+    background: #F0FFFF;
+    text-align: center;
+    vertical-align: middle; 
+}
+
+table.resultados-tab td {
+    text-align: center;
+    vertical-align: middle; 
+}
+
+table.resultados-tab thead {
+    text-align: center;
+    vertical-align: middle; 
+}
+
+table.resultados-tab th {
+    text-align: center;
+    vertical-align: middle; 
+}
+
+.graf {
+    width: 90% !important;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: auto;
+}
+
+/* Footer */
+
+.categories-footer {
+    margin: 0 auto;
+    bottom: 0px;
+    width: 100%;
+    background-color: #000;
+    height: 80px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.logof {
+    float: right;
+    right: 0;
+    padding: 20px;
+    width: 30%;
+}
+
+.textof {
+    display: inline-block;
+    left: 0;
+    padding: 15px;
+    width: 65%;
+    color: gainsboro;
+    text-align: center;
+}
+
+/*Media queries*/
+
+@media (max-width:1014px){
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .logof {
+        width: 100%;
+        vertical-align: text-bottom;
+    }
+    .textof {
+        width: 100%;
+        height: 100%;
+        color: gainsboro;
+        text-align: center;
+    }
+    .categories-footer {
+        width: 100%;
+        background-color: #000;
+        vertical-align: middle;
+        height: 200px;
+        position: relative;
+    }
+
+}
+
+/* Elementos e ajustes */
+
+#ordenar {
+    padding: 10px;
+}
+
+/* Esconder a ScrollBar mantendo a funcionalidade */
+
+/* Esconder a scrollbar para Chrome, Safari and Opera */
+.corpo::-webkit-scrollbar {
+    z-index: 11;
+}
+
+.corpo::-webkit-scrollbar-button {
+    z-index: 12;
+    scrollbar-darkshadow-color: #000;
+}
+
+/* Ícones */
+.material-icons {
+    vertical-align: middle;
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+.submenu {
+    vertical-align: middle;
+    margin-left: 0px;
+}
+
+/* botão personalizado */
+.button.button-personalizado,
+button.button-personalizado,
+input[type="submit"].button-personalizado,
+input[type="reset"].button-personalizado,
+input[type="button"].button-personalizado {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+.button.button-personalizado:hover,
+button.button-personalizado:hover,
+input[type="submit"].button-personalizado:hover,
+input[type="reset"].button-personalizado:hover,
+input[type="button"].button-personalizado:hover,
+.button.button-personalizado:focus,
+button.button-personalizado:focus,
+input[type="submit"].button-personalizado:focus,
+input[type="reset"].button-personalizado:focus,
+input[type="button"].button-personalizado:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+
+/* videos */
+.video-tela {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-left: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+

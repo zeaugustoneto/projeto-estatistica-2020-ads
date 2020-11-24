@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <!-- METAS BÁSICAS DA PÁGINA
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Calculadora Estatística</title>
+    <meta name="description" content="Projeto de Estatística do 3º Ciclo de ADS da Fatec-Franca">
+    <meta name="author" content="Os alunos:
+    JOSE AUGUSTO SOARES DE SOUZA NETO;
+    LUÍS GUSTAVO GIANVECCHIO SANTOS;
+    MARCELO LEMOS DE MELO;
+    RAFAEL RONALD FREITAS PAULINO;
+    RAFAEL KHODOR RESENDE;
+    VINICIUS GOMES DE SOUZA.">
+
+    <!-- METAS ESPECÍFICAS PARA CELULAR
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /> -->
+
+    <!-- FONTES E ÍCONES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/fonts-googleApi-openSans.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css">
+
+    <!-- MENU
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/component.css" />
+
+    <!-- SCRIPT MENU
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="./js/modernizr.custom.js"></script>
+
+    <!-- FAVICON
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="./imagens/favicon.png">
+
+
+</head>
+
+<body class="corpo">
+
+    <!-- ESTRUTURA DE LAYOUT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- TOPO LOGO E MENU
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- <div w3-include-html="./include/topoMenu.html"></div> -->
+
+    <div class="section categories">
+
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <img src="./imagens/logo.png">
+                    <a name="topo"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MENU PRINCIPAL
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <div class="container-menu">
+        <!--barra superior do menu-->
+        <ul id="gn-menu" class="gn-menu-main">
+            <li class="gn-trigger">
+                <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+                <nav class="gn-menu-wrapper">
+                    <div class="gn-scroller">
+                        <ul class="gn-menu">
+                            <a href="login.html"><i class="material-icons">calculate</i>Calculadora</a>
+                            <a href="oquee.html"><i class="material-icons">insert_chart_outlined</i>O que é
+                                Estatística?</a>
+                            <a href="eDescritiva.html"><i class="material-icons">table_chart</i>Estatística
+                                Descritiva</a>
+                            <ul class="gn-submenu">
+                                <li>
+                                    <a href="medidaTC.html" class="submenu">Medidas de Tendêcia Central</a>
+                                </li>
+                                <li>
+                                    <a href="medidaDisp.html" class="submenu">Medidas de Dispersão</a>
+                                </li>
+                                <li>
+                                    <a href="medidaSep.html" class="submenu">Medidas Separatrizes</a>
+                                </li>
+                                <li>
+                                    <a href="distEFreq.html" class="submenu">Distribuição de Frequências</a>
+                                </li>
+                            </ul>
+                            <a href="probabilidades.html"><i class="material-icons">bar_chart</i>Distribuição de
+                                Probabilidades</a>
+                            <ul class="gn-submenu">
+                                <li>
+                                    <a href="pNormal.html" class="submenu">Distribuição Normal</a>
+                                </li>
+                                <li>
+                                    <a href="pBinomial.html" class="submenu">Distribuição Binomial</a>
+                                </li>
+                                <li>
+                                    <a href="pUniforme.html" class="submenu">Distribuição Uniforme</a>
+                                </li>
+                            </ul>
+                            <a href="correlaRegressao.html"><i class="material-icons">bubble_chart</i>Correlação de
+                                Regressão</a>
+                            <a href="como.html"><i class="material-icons">build</i>Como foi o aprendizado?</a>
+                            <a href="sobreNos.html"><i class="material-icons">groups</i>Quem somos?</a>
+                        </ul>
+                    </div>
+                </nav>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html"><span>Login</span></a></li>
+        </ul>
+
+    </div>
+
+    <!-- CONTEUDO PRINCIPAL
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- Título -->
+    <div class="section categories-titulo">
+        <div class="container">
+            <div class="row">
+                <h1 class="titulo">MEDIDAS DE TENDÊNCIA CENTRAL.</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Título 2 -->
+    <div class="section categories-titulo2">
+        <h3 class="titulo">Moda, Média e Mediana.</h3>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="section categories-conteudo">
+        <div class="container">
+            <div class="row">
+                <p><strong>O que s&atilde;o as Medidas de Tend&ecirc;ncia Central?</strong></p>
+                <p>S&atilde;o quando os dados observados de uma distribui&ccedil;&atilde;o ficam em torno dos valores
+                    centrais. N&oacute;s temos tr&ecirc;s Medidas de Tend&ecirc;ncia Central, m&eacute;dia, moda e
+                    mediana.</p>
+                <p><strong>M&eacute;dia</strong></p>
+                <p>Seguindo uma defini&ccedil;&atilde;o mais informal de &quot;m&eacute;dia&quot;, pode-se assumir que
+                    no campo da estat&iacute;stica, dados possuem posi&ccedil;&otilde;es. Por exemplo, cada valor dos
+                    lan&ccedil;amentos de um dado possui sua posi&ccedil;&atilde;o em uma planilha eletr&ocirc;nica. Em
+                    estat&iacute;stica, m&eacute;dia &eacute; uma medida de posi&ccedil;&atilde;o que indica um valor
+                    uniforme dos dados.</p>
+                <p><strong>Moda</strong></p>
+                <p>Moda &eacute; uma das medidas de altura de um conjunto de dados, assim como a m&eacute;dia e a
+                    mediana. Ela pode ser definida em moda amostral e populacional.</p>
+                <p>Em rela&ccedil;&atilde;o &agrave; primeira delas, a moda amostral de um conjunto de dados trata do
+                    valor que ocorre com maior frequ&ecirc;ncia ou o valor mais comum em um conjunto de dados. Moda
+                    &eacute; <strong>especialmente &uacute;til quando os valores</strong> ou as
+                    observa&ccedil;&otilde;es <strong>n&atilde;o s&atilde;o num&eacute;ricos</strong>, <strong>casos em
+                        que a m&eacute;dia e a mediana n&atilde;o podem ser definidas</strong>. Por exemplo, <strong>a
+                        moda da amostra</strong> {ma&ccedil;&atilde;, banana, laranja, laranja, laranja, p&ecirc;ssego}
+                    <strong>&eacute; laranja</strong>. Moda amostral n&atilde;o &eacute; necessariamente &uacute;nica
+                    como m&eacute;dia ou mediana. Amostras que possuem uma moda s&atilde;o chamadas
+                    <strong>unimodais</strong>. Por exemplo, a amostra {1, 2, 3, 5, 5, 6, 7} tem moda 5. Amostras que
+                    possuem duas modas s&atilde;o chamadas <strong>bimodais</strong>. Por exemplo, a amostra {1, 2, 3,
+                    5, 5, 6, 6} tem modas 5 e 6. Amostras que possuem v&aacute;rias modas s&atilde;o chamadas
+                    <strong>multimodais</strong>. Por exemplo, a amostra {1, 2, 3, 5, 5, 6, 6, 7, 7} tem modas 5, 6 e 7.
+                    Amostras que n&atilde;o possuem moda s&atilde;o chamadas <strong>amodais</strong>. Por exemplo, a
+                    amostra {1, 3, 2, 5, 7, 6} n&atilde;o tem moda, pois todos ocorrem o mesmo n&uacute;mero de vezes.
+                </p>
+                <p><strong>Mediana</strong></p>
+                <p>Mediana &eacute; o valor que separa a metade maior e a metade menor de uma amostra, uma
+                    popula&ccedil;&atilde;o ou uma distribui&ccedil;&atilde;o de probabilidade. Em termos mais simples,
+                    mediana pode ser o valor do meio de um conjunto de dados. No conjunto de dados {1, 3, 3, 6, 7, 8,
+                    9}, por exemplo, a mediana &eacute; 6. Se houver um n&uacute;mero par de observa&ccedil;&otilde;es,
+                    n&atilde;o h&aacute; um &uacute;nico valor do meio. Ent&atilde;o, a mediana &eacute; definida como a
+                    m&eacute;dia dos dois valores do meio. No conjunto de dados {3, 5, 7, 9}, a mediana &eacute; (5 + 7)
+                    / 2}} = 6.</p>
+                <p><strong>A - Vari&aacute;vel Qualitativa </strong> (nominal ou ordinal):</p>
+                <p>Na qualitativa nominal a ordem n&atilde;o importa, j&aacute; na ordinal, temos que ordenar as
+                    vari&aacute;veis em uma ordem l&oacute;gica. </p>
+                <ol>
+                    <li><strong>m&eacute;dia</strong> (ponderada simples):
+                        <ul>
+                            <li> n&atilde;o tem.</li>
+                        </ul>
+                    </li>
+                    <li><strong>moda:</strong>
+                        <ul>
+                            <li>&eacute; a Vari&aacute;vel de maior Frequ&ecirc;ncia Simples(fi).</li>
+                        </ul>
+                    </li>
+                    <li><strong>mediana:</strong>
+                        <ul>
+                            <li>temos que encontrar a posi&ccedil;&atilde;o onde se encontra a mediana, que &eacute; o
+                                elemento central localizado na Frequ&ecirc;ncia Acumulada(fac) caso a fi(total) for
+                                impar; j&aacute; quando a fi(total) for par, a mediana ser&aacute; encontrada em duas
+                                posi&ccedil;&otilde;es, em 50% da fi(total) e na posi&ccedil;&atilde;o seguinte. </li>
+                            <li>interpreta&ccedil;&atilde;o:
+                                <ul>
+                                    <li>50% das &quot;Vari&aacute;veis(xi)&quot; est&atilde;o relacionadas com a
+                                        &quot;Mediana&quot; e abaixo na condi&ccedil;&atilde;o pesquisada, e 50% das
+                                        &quot;Vari&aacute;veis(xi)&quot; est&atilde;o relacionadas com a
+                                        &quot;Mediana&quot; e acima na condi&ccedil;&atilde;o pesquisada.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <p><strong>B - Vari&aacute;vel Quantitativa Discreta</strong> (pouca variedade e muita
+                    repeti&ccedil;&atilde;o de dados):</p>
+                <p>1&ordm;) Coletar os Dados;</p>
+                <p>2&ordm;) Organizar os dados, ordenando-os;</p>
+                <p>3&ordm;) Tabular os dados em duas colunas, a primeira com o Nome da Vari&aacute;vel pesquisada(xi), e
+                    a segunda coluna com a Frequ&ecirc;ncia Simples(fi) dos dados;</p>
+                <p>4&ordm;) Calcular as Medidas de Tend&ecirc;ncia Central:</p>
+                <ol>
+                    <li><strong>m&eacute;dia</strong> (ponderada simples):
+                        <ul>
+                            <li> xi * fi + xi * fi ... + xi * fi / fi(total).</li>
+                            <li>interpreta&ccedil;&atilde;o:
+                                <ul>
+                                    <li>em m&eacute;dia cada Vari&aacute;vel(xi) est&aacute; relacionada aproximadamente
+                                        com a M&eacute;dia na condi&ccedil;&atilde;o pesquisada.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><strong>moda:</strong>
+                        <ul>
+                            <li>&eacute; o Vari&aacute;vel(xi) que tem a maior Frequ&ecirc;ncia Simples(fi); Pode ser
+                                unimodal quando tem uma s&oacute; moda, bimodal quando tem duas, multimodal quando tem
+                                mais de duas modas, e amodal, quando n&atilde;o h&aacute; moda, como j&aacute; explicado
+                                acima.</li>
+                        </ul>
+                    </li>
+                    <li><strong>mediana:</strong>
+                        <ul>
+                            <li>temos que encontrar a posi&ccedil;&atilde;o onde se encontra a mediana, que &eacute; o
+                                elemento central localizado na Frequ&ecirc;ncia Acumulada(fac) caso a fi(total) for
+                                impar; j&aacute; quando a fi(total) for par, a mediana ser&aacute; encontrada em duas
+                                posi&ccedil;&otilde;es, em 50% da fi(total) e na posi&ccedil;&atilde;o seguinte. </li>
+                            <li>interpreta&ccedil;&atilde;o:
+                                <ul>
+                                    <li>50% das &quot;Vari&aacute;veis(xi)&quot; est&atilde;o relacionadas
+                                        aproximadamente com a &quot;Mediana&quot; ou menos na condi&ccedil;&atilde;o
+                                        pesquisada, e 50% das &quot;Vari&aacute;veis(xi)&quot; est&atilde;o relacionadas
+                                        aproximadamente com a &quot;Mediana&quot; ou mais na condi&ccedil;&atilde;o
+                                        pesquisada.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <p><strong>C - Vari&aacute;vel Quantitativa Cont&iacute;nua</strong>:</p>
+                <p>1&ordm;) Coletar os dados;</p>
+                <p>2&ordm;) Organizar os dados, ordenando-os;</p>
+                <p>3&ordm;) Constru&ccedil;&atilde;o da tabela que se d&aacute; em tr&ecirc;s etapas;</p>
+                <ol>
+                    <li>encontrar a Amplitude Total(At) de uma sequ&ecirc;ncia:
+                        <ul>
+                            <li>At = <strong>Xmax</strong>(valor da &uacute;ltima posi&ccedil;&atilde;o dos dados)
+                                <strong>- Xmin</strong>(valor da primeira posi&ccedil;&atilde;o dos dados).</li>
+                        </ul>
+                    </li>
+                    <li>encontrar a quantidade de classes(linhas (k)) que a tabela pode ter:
+                        <ul>
+                            <li><strong>k = &radic;n</strong>, onde n é o total de elementos coletados, e de onde
+                                teremos o resultado obtido como o n&uacute;mero de linhas ou menos uma linha, ou ainda
+                                mais uma linha.</li>
+                        </ul>
+                    </li>
+                    <li>encontrar o intervalo de classes, ou seja, o intervalo dos elementos que ser&atilde;o
+                        apresentados em cada linha:
+                        <ul>
+                            <li><strong>At(+ no m&iacute;nimo um) / k</strong>;</li>
+                            <li>Assim descobrimos quantas classes(linhas) a tabela ter&aacute;, e o invervalo dos itens
+                                que ser&atilde;o apresentados em cada linha, no exemplo abaixo foi obtidos o resultado
+                                de 5 linhas com o intervalor de 16 elementos: (onde esse s&iacute;mbolo | representa a
+                                inclus&atilde;o do limite inferior na classe e a exclus&atilde;o do limite superior da
+                                classe) </li>
+                        </ul>
+                    </li>
+                </ol>
+                <p align="center"><img src="./imagens/tabela_qc.png"
+                        alt="Exemplo de tabela na Quantitativa Cont&iacute;nua" width="378" height="314" /></p>
+                <p>4&ordm;) Calcular as Medidas de Tend&ecirc;ncia Central:</p>
+                <ol>
+                    <li><strong>m&eacute;dia</strong> (ponderada simples):
+                        <ul>
+                            <li> xi &eacute; o ponto m&eacute;dio do intervalo de classes, ainda com o exemplo acima:
+                                <ul>
+                                    <li><strong>(60(intervalo m&iacute;nimo) + 75(intervalo m&aacute;ximo) / 2 = 68 * fi
+                                            + (icMin + icMax) / 2 * fi ...) / fi(total)</strong>;</li>
+                                </ul>
+                            </li>
+                            <li>interpreta&ccedil;&atilde;o:
+                                <ul>
+                                    <li>a m&eacute;dia desta &quot;Vari&aacute;vel(xi)&quot; &eacute; de
+                                        &quot;M&eacute;dia&quot; na condi&ccedil;&atilde;o pesquisada.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>moda simples:</strong> (existem outros tipos de moda)
+                        <ul>
+                            <li>&eacute; o Xi(neste caso, a <strong>m&eacute;dia simples da classe modal</strong>);
+                            </li>
+                            <li>interpreta&ccedil;&atilde;o:
+                                <ul>
+                                    <li>o ponto mais frequente observado nesta vari&aacute;vel foi de
+                                        &quot;Mediana&quot; na condi&ccedil;&atilde;o pesquisada.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>mediana:</strong>
+                        <ul>
+                            <li>temos que encontrar a posi&ccedil;&atilde;o onde se encontra a mediana, que &eacute; o
+                                elemento central localizado na Frequ&ecirc;ncia Acumulada(fac) caso a fi(total) for
+                                impar; j&aacute; quando a fi(total) for par, a mediana ser&aacute; encontrada em duas
+                                posi&ccedil;&otilde;es, em 50% da fi(total) e na posi&ccedil;&atilde;o seguinte.</li>
+                            <li>posi&ccedil;&atilde;o da Mediana 50% do fi(total) e a posi&ccedil;&atilde;o seguinte;
+                            </li>
+                            <li>Md = I(limite inferior da classe) + &#8721;fi / 2 - Fant(Frequ&ecirc;ncia Acumulada
+                                Anterior) / find(Frequ&ecirc;ncia Simples da Mediana * h(intervalo de classes). </li>
+                            <li>interpreta&ccedil;&atilde;o:
+                                <ul>
+                                    <li>50% das &quot;Vari&aacute;veis(xi)&quot; est&atilde;o relacionadas
+                                        aproximadamente com a &quot;Mediana&quot; ou menos na condi&ccedil;&atilde;o
+                                        pesquisada, e 50% das &quot;Vari&aacute;veis(xi)&quot; est&atilde;o relacionadas
+                                        aproximadamente com a &quot;Mediana&quot; ou mais na condi&ccedil;&atilde;o
+                                        pesquisada.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p>Para entender melhor a mat&eacute;ria, assista &agrave; v&iacute;deoaula da Professora Maria
+                    Lu&iacute;sa Cervi Uzun, em seu canal no YouTube, disponível abaixo.</p>
+                <p>Para melhor fixar a mat&eacute;ria, resolva os exerc&iacute;cios da lista preparada para esta aula,
+                    <a href="./pdf/Lista4_Exercicios_MTC.pdf" target="_blank">clique aqui para baixar o arquivo</a>.
+                </p>
+
+                <div class="calcular">
+                    <a href="./ceDescritiva.html">
+                        <button class="button-primary" aria-placeholder="Calcular">Calcular</button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- vídeos -->
+    <div class="section categories-conteudo">
+        <div class="container">
+            <div class="row">
+                <div class="ten column videos">
+                    <div class="video-tela">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6BL79i6QyoU"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="section categories-conteudo">
+        <div class="container">
+            <div class="row">
+                <div class="ten column videos">
+                    <div class="video-tela">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Q6JDRyT6my8"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="section categories-conteudo">
+        <div class="container">
+            <div class="row">
+                <div class="ten column videos">
+                    <div class="video-tela">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9CVXOZNYrM0"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="section categories-footer">
+        <div class="container">
+            <div class="row">
+                <div class="one-half column logof">
+                    <img src="./imagens/logo.png">
+                </div>
+
+                <div class="one-half column textof">
+                    <p>Trabalho realizado com fins educacionais. Fontes utilizadas na seção "Como foi o aprendizado?"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src='./js/calc.js' defer></script>
+    <script src='./js/chart.js@2.8.0'></script>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script src='./js/jquery-ui.js'></script>
+    <script src='./js/ajustes.js'></script>
+
+    <!-- MENU
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="./js/classie.js"></script>
+    <script src="./js/gnmenu.js"></script>
+    <script>
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <!-- METAS BÁSICAS DA PÁGINA
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Calculadora Estatística</title>
+    <meta name="description" content="Projeto de Estatística do 3º Ciclo de ADS da Fatec-Franca">
+    <meta name="author" content="Os alunos:
+    JOSE AUGUSTO SOARES DE SOUZA NETO;
+    LUÍS GUSTAVO GIANVECCHIO SANTOS;
+    MARCELO LEMOS DE MELO;
+    RAFAEL RONALD FREITAS PAULINO;
+    RAFAEL KHODOR RESENDE;
+    VINICIUS GOMES DE SOUZA.">
+
+    <!-- METAS ESPECÍFICAS PARA CELULAR
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /> -->
+
+    <!-- FONTES E ÍCONES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/fonts-googleApi-openSans.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css">
+
+    <!-- MENU
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/component.css" />
+
+    <!-- SCRIPT MENU
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="./js/modernizr.custom.js"></script>
+
+    <!-- FAVICON
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="./imagens/favicon.png">
+
+
+</head>
+
+<body class="corpo">
+
+    <!-- ESTRUTURA DE LAYOUT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- TOPO LOGO E MENU
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- <div w3-include-html="./include/topoMenu.html"></div> -->
+
+    <div class="section categories">
+
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <img src="./imagens/logo.png">
+                    <a name="topo"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MENU PRINCIPAL
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <div class="container-menu">
+        <!--barra superior do menu-->
+        <ul id="gn-menu" class="gn-menu-main">
+            <li class="gn-trigger">
+                <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+                <nav class="gn-menu-wrapper">
+                    <div class="gn-scroller">
+                        <ul class="gn-menu">
+                            <a href="login.html"><i class="material-icons">calculate</i>Calculadora</a>
+                            <a href="oquee.html"><i class="material-icons">insert_chart_outlined</i>O que é
+                                Estatística?</a>
+                            <a href="eDescritiva.html"><i class="material-icons">table_chart</i>Estatística
+                                Descritiva</a>
+                            <ul class="gn-submenu">
+                                <li>
+                                    <a href="medidaTC.html" class="submenu">Medidas de Tendêcia Central</a>
+                                </li>
+                                <li>
+                                    <a href="medidaDisp.html" class="submenu">Medidas de Dispersão</a>
+                                </li>
+                                <li>
+                                    <a href="medidaSep.html" class="submenu">Medidas Separatrizes</a>
+                                </li>
+                                <li>
+                                    <a href="distEFreq.html" class="submenu">Distribuição de Frequências</a>
+                                </li>
+                            </ul>
+                            <a href="probabilidades.html"><i class="material-icons">bar_chart</i>Distribuição de
+                                Probabilidades</a>
+                            <ul class="gn-submenu">
+                                <li>
+                                    <a href="pNormal.html" class="submenu">Distribuição Normal</a>
+                                </li>
+                                <li>
+                                    <a href="pBinomial.html" class="submenu">Distribuição Binomial</a>
+                                </li>
+                                <li>
+                                    <a href="pUniforme.html" class="submenu">Distribuição Uniforme</a>
+                                </li>
+                            </ul>
+                            <a href="correlaRegressao.html"><i class="material-icons">bubble_chart</i>Correlação de
+                                Regressão</a>
+                            <a href="como.html"><i class="material-icons">build</i>Como foi o aprendizado?</a>
+                            <a href="sobreNos.html"><i class="material-icons">groups</i>Quem somos?</a>
+                        </ul>
+                    </div>
+                </nav>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html"><span>Login</span></a></li>
+        </ul>
+
+    </div>
+
+    <!-- CONTEUDO PRINCIPAL
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- Título -->
+    <div class="section categories-titulo">
+        <div class="container">
+            <div class="row">
+                <h1 class="titulo">CALCULADORA ESTATÍSTICA</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botões de escolha do tipo de cálculo -->
+
+    <div class="section categories-botoes">
+        <div class="container">
+            <div class="row">
+                <li class="descritiva-btn">
+                    <a href="ceDescritiva.html#topo"><input type="reset" value="Descritiva" class="descritiva-btn"
+                            placeholder="Descritiva"></a>
+                </li>
+            </div>
+        </div>
+    </div>
+
+    <div class="section categories-inferencial">
+        <div class="container">
+            <div class="row">
+                <li class="one-third column normal-btn">
+                    <a href="cpNormal.html#topo"><input type="reset" value="Dist. Normal" class="normal-btn"
+                            placeholder="Dist. Normal"></a>
+                </li>
+                <li class="one-third column binomial-btn">
+                    <a href="cpBinomial.html#topo"><input type="reset" value="Dist. Binomial" class="binomial-btn"
+                            placeholder="Dist. Binomial"></a>
+                </li>
+                <li class="one-third column uniforme-btn">
+                    <a href="cpUniforme.html#topo"><input type="reset" value="Dist. Uniforme" class="regressao-btn"
+                            placeholder="Dist. Uniforme"></a>
+                </li>
+            </div>
+        </div>
+    </div>
+
+    <div class="section categories-botoes">
+        <div class="container">
+            <div class="row">
+                <li class="regressao-btn">
+                    <a href="ccorrelaRegressao.html#topo"><input type="reset" value="Correlação e Regressão"
+                            class="regressao-btn" placeholder="Correlação e Regressão"></a>
+                </li>
+            </div>
+        </div>
+    </div>
+
+    <!-- Título 2 -->
+    <div class="section categories-titulo2">
+        <h3 class="titulo">DISTRIBUIÇÃO DE PROBABILIDADES NORMAL</h3>
+    </div>
+
+    <!-- Calculadora Inferencial Normal-->
+
+    <!-- Média -->
+    <div class="section categories-medidas">
+        <div class="container">
+            <div class="row">
+                <div class="ten column medidas">
+                    <label for="media" class="textoDados">Média:</label>
+                    <input id="media" type="number" name="eMedia" class="eMedia"
+                        placeholder="Insira aqui o valor da Média">
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desvio Padrão -->
+    <div class="section categories-medidas">
+        <div class="container">
+            <div class="row">
+                <div class="ten column medidas">
+                    <label for="desvio" class="textoDados">Desvio Padrão:</label>
+                    <input id="desvioPadrao" type="number" name="eDesvio" class="eDesvio"
+                        placeholder="Insira aqui o valor do Desvio Padrão">
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intervalo -->
+    <div class="section categories-separatriz">
+        <div class="container">
+            <div class="row">
+                <div class="ten column separatriz">
+                    <label for="valorIntervalo" class="textoDados">Selecione o Intervalo:</label>
+                    <select id="opcoes_Dnormal" class="eIntervalo">
+                        <option value="">Selecione o Intervalo</option>
+                        <option value="maiorQue">Maior que</option>
+                        <option value="entre">Entre</option>
+                        <option value="menorQue">Menor que</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Valores -->
+    <div class="section categories-medidas">
+        <div class="container">
+            <div class="row">
+                <div class="ten column medidas">
+                    <label for="valorIntervalo" class="textoDados">Insira o(s) Valor(es) do(s) Intervalo(s):</label>
+                    <input id="valor" type="text" name="vIntervalo" class="vIntervalo"
+                        placeholder="Quando o intervalo for Entre dois números, separar por ponto e vírgula (;).">
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="resultado"></a>
+
+    <br>
+
+    <!-- Botões -->
+    <div class="section categories-botoes">
+        <div class="container">
+            <div class="row">
+                <div class="one-half column calcular">
+                    <a href="#resultado">
+                        <button id="botao_normal" class="button-primary" aria-placeholder="Calcular">Calcular</button>
+                    </a>
+                </div>
+
+                <div class="one-half column limpar">
+                    <a href="#topo"><button type="reset" value="Limpar" class="button" placeholder="Limpar"
+                            onclick="Refresh()">Limpar</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Resultados -->
+    <!-- Tabela -->
+    <div class="section categories-resultados">
+        <div class="container">
+            <div class="row">
+                <div class="resultados-totais">
+
+                    <div class="resultado_dist" id="resultados">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Título resultados
+    <div class="section categories-tituloresultados">
+        <div class="container">
+            <div class="row">
+                <h3 class="titulo3">Resultados AQUI.</h3>
+            </div>
+        </div>
+    </div>-->
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="section categories-footer">
+        <div class="container">
+            <div class="row">
+                <div class="one-half column logof">
+                    <img src="./imagens/logo.png">
+                </div>
+
+                <div class="one-half column textof">
+                    <p>Trabalho realizado com fins educacionais. Fontes utilizadas na seção "Como foi o aprendizado?"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src='./js/probabilidade/normal.js'></script>
+    <script src='./js/chart.js@2.8.0'></script>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script src='./js/jquery-ui.js'></script>
+    <script src='./js/ajustes.js'></script>
+
+    <!-- MENU
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="./js/classie.js"></script>
+    <script src="./js/gnmenu.js"></script>
+    <script>
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
+
+</body>
+
+</html>

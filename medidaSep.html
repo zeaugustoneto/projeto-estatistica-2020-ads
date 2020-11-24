@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <!-- METAS BÁSICAS DA PÁGINA
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Calculadora Estatística</title>
+    <meta name="description" content="Projeto de Estatística do 3º Ciclo de ADS da Fatec-Franca">
+    <meta name="author" content="Os alunos:
+    JOSE AUGUSTO SOARES DE SOUZA NETO;
+    LUÍS GUSTAVO GIANVECCHIO SANTOS;
+    MARCELO LEMOS DE MELO;
+    RAFAEL RONALD FREITAS PAULINO;
+    RAFAEL KHODOR RESENDE;
+    VINICIUS GOMES DE SOUZA.">
+
+    <!-- METAS ESPECÍFICAS PARA CELULAR
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /> -->
+
+    <!-- FONTES E ÍCONES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/fonts-googleApi-openSans.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css">
+
+    <!-- MENU
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/component.css" />
+
+    <!-- SCRIPT MENU
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="./js/modernizr.custom.js"></script>
+
+    <!-- FAVICON
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="./imagens/favicon.png">
+
+
+</head>
+
+<body class="corpo">
+
+    <!-- ESTRUTURA DE LAYOUT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- TOPO LOGO E MENU
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- <div w3-include-html="./include/topoMenu.html"></div> -->
+
+    <div class="section categories">
+
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <img src="./imagens/logo.png">
+                    <a name="topo"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MENU PRINCIPAL
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <div class="container-menu">
+        <!--barra superior do menu-->
+        <ul id="gn-menu" class="gn-menu-main">
+            <li class="gn-trigger">
+                <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+                <nav class="gn-menu-wrapper">
+                    <div class="gn-scroller">
+                        <ul class="gn-menu">
+                            <a href="login.html"><i class="material-icons">calculate</i>Calculadora</a>
+                            <a href="oquee.html"><i class="material-icons">insert_chart_outlined</i>O que é
+                                Estatística?</a>
+                            <a href="eDescritiva.html"><i class="material-icons">table_chart</i>Estatística
+                                Descritiva</a>
+                            <ul class="gn-submenu">
+                                <li>
+                                    <a href="medidaTC.html" class="submenu">Medidas de Tendêcia Central</a>
+                                </li>
+                                <li>
+                                    <a href="medidaDisp.html" class="submenu">Medidas de Dispersão</a>
+                                </li>
+                                <li>
+                                    <a href="medidaSep.html" class="submenu">Medidas Separatrizes</a>
+                                </li>
+                                <li>
+                                    <a href="distEFreq.html" class="submenu">Distribuição de Frequências</a>
+                                </li>
+                            </ul>
+                            <a href="probabilidades.html"><i class="material-icons">bar_chart</i>Distribuição de
+                                Probabilidades</a>
+                            <ul class="gn-submenu">
+                                <li>
+                                    <a href="pNormal.html" class="submenu">Distribuição Normal</a>
+                                </li>
+                                <li>
+                                    <a href="pBinomial.html" class="submenu">Distribuição Binomial</a>
+                                </li>
+                                <li>
+                                    <a href="pUniforme.html" class="submenu">Distribuição Uniforme</a>
+                                </li>
+                            </ul>
+                            <a href="correlaRegressao.html"><i class="material-icons">bubble_chart</i>Correlação de
+                                Regressão</a>
+                            <a href="como.html"><i class="material-icons">build</i>Como foi o aprendizado?</a>
+                            <a href="sobreNos.html"><i class="material-icons">groups</i>Quem somos?</a>
+                        </ul>
+                    </div>
+                </nav>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html"><span>Login</span></a></li>
+        </ul>
+
+    </div>
+
+    <!-- CONTEUDO PRINCIPAL
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- Título -->
+    <div class="section categories-titulo">
+        <div class="container">
+            <div class="row">
+                <h1 class="titulo">MEDIDAS SEPARATRIZES</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Título 2 -->
+    <div class="section categories-titulo2">
+        <h3 class="titulo">Quartil, Quintil, Decil e Percentil.</h3>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="section categories-conteudo">
+        <div class="container">
+            <div class="row">
+                <p>Fun&ccedil;&atilde;o: dividir a distribui&ccedil;&atilde;o ou sequ&ecirc;ncia em partes iguais.</p>
+                <p><strong>Temos quatro Medidas Separaratrizes:</strong></p>
+                <ul>
+                    <li><strong>Quartil:</strong> divide a&nbsp;Sequ&ecirc;ncia&nbsp;em&nbsp;4&nbsp;partes&nbsp;iguais;
+                        <ul>
+                            <li>Portanto&#8203;:
+                                <ul>
+                                    <li><strong>Q1&nbsp;= 25% - </strong> separa a sequ&ecirc;ncia deixando 25% de seus
+                                        valores &agrave; esquerda e 75% de seus valores&nbsp;&agrave; direita;&#8203;
+                                    </li>
+                                    <li><strong>Q2&nbsp;= 50%</strong> <strong>-</strong> separa a sequ&ecirc;ncia
+                                        deixando 50% de seus valores &agrave; esquerda e 50% de seus
+                                        valores&nbsp;&agrave; direita;&#8203;</li>
+                                    <li><strong>Q3&nbsp;= 75%</strong> <strong>-</strong> separa a sequ&ecirc;ncia
+                                        deixando 75% de seus valores &agrave; esquerda e 25% de seus
+                                        valores&nbsp;&agrave; direita;&#8203;</li>
+                                    <li><strong>Q4&nbsp;= 100%.</strong></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>Quintil:</strong> divide a Sequ&ecirc;ncia em 5 partes iguais;
+                        <ul>
+                            <li>Portanto&#8203;:
+                                <ul>
+                                    <li><strong>K1 = 20% - </strong> separa a sequ&ecirc;ncia deixando 20% de seus
+                                        valores &agrave; esquerda e 80% de seus valores &agrave; direita;&#8203;</li>
+                                    <li><strong>K2 = 40% - </strong> separa a sequ&ecirc;ncia deixando 40% de seus
+                                        valores &agrave; esquerda e 60% de seus valores &agrave; direita;&#8203;</li>
+                                    <li><strong>K3 = 60% - </strong> separa a sequ&ecirc;ncia deixando 60% de seus
+                                        valores &agrave; esquerda e 40% de seus valores &agrave; direita;&#8203;</li>
+                                    <li><strong>K4 = 80% - </strong> separa a sequ&ecirc;ncia deixando 80% de seus
+                                        valores &agrave; esquerda e 20% de seus valores &agrave; direita;&#8203;</li>
+                                    <li><strong>K5 = 100%. </strong></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>Decil:</strong> divide a Sequ&ecirc;ncia em 10 partes iguais;&#8203;
+                        <ul>
+                            <li>Portanto&#8203;:
+                                <ul>
+                                    <li><strong>D1 = 10% - </strong> separa a sequ&ecirc;ncia deixando 10% de seus
+                                        valores &agrave; esquerda e 90% de seus valores &agrave; direita;&#8203;</li>
+                                    <li><strong>D2 = 20% - </strong> separa a sequ&ecirc;ncia deixando 20% de seus
+                                        valores &agrave; esquerda e 80% de seus valores &agrave; direita;&#8203;</li>
+                                    <li><strong>D3 = 30% - </strong> separa a sequ&ecirc;ncia deixando 30% de seus
+                                        valores &agrave; esquerda e 70% de seus valores &agrave; direita;&#8203;</li>
+                                    <li><strong>D4 = 40% - </strong> separa a sequ&ecirc;ncia deixando 40% de seus
+                                        valores &agrave; esquerda e 60% de seus valores &agrave; direita;&#8203;</li>
+                                    <li>...</li>
+                                    <li><strong>D10 = 100%.</strong></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>Porcentil:</strong> divide a Sequ&ecirc;ncia em 100 partes iguais.
+                        <ul>
+                            <li>Portanto&#8203;:
+                                <ul>
+                                    <li><strong>P1 = 1% - </strong> separa a sequ&ecirc;ncia deixando 1% de seus valores
+                                        &agrave; esquerda e 99% de seus valores &agrave; direita;&#8203;</li>
+                                    <li><strong>P2 = 2% - </strong> separa a sequ&ecirc;ncia deixando 2% de seus valores
+                                        &agrave; esquerda e 98% de seus valores &agrave; direita;&#8203;</li>
+                                    <li>...</li>
+                                    <li><strong>P83 = 83% - </strong> separa a sequ&ecirc;ncia deixando 83% de seus
+                                        valores &agrave; esquerda e 17% de seus valores &agrave; direita;&#8203;</li>
+                                    <li><strong>P98 = 98% - </strong> separa sequ&ecirc;ncia deixando 98% de seus
+                                        valores &agrave; esquerda e 2% de seus valores &agrave; direita;&#8203;</li>
+                                    <li><strong>P100 = 100%.</strong></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><strong>Exemplos:</strong></p>
+                <ul>
+                    <li><strong>1) Vari&aacute;vel Qualitativa (nominal ou ordinal) </strong>
+                        <ul>
+                            <li>A distribui&ccedil;&atilde;o abaixo representa o grau de satisfa&ccedil;&atilde;o dos
+                                funcion&aacute;rios de uma empresa. Calcule o K<sub>3</sub>.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p align="center"><img src="./imagens/MS.jpg" alt="Tabela" width="416" height="227" />
+                </p>
+                <p>Primeiramente devemos encontrar a posi&ccedil;&atilde;o.</p>
+                <p>K<sub>3</sub></p>
+                <p>Posi&ccedil;&atilde;o: 60% de &#8721;fi</p>
+                <p>Posi&ccedil;&atilde;o 60% de 30 = 18<sup>a</sup></p>
+                <p>K<sub>3</sub> = razo&aacute;vel.</p>
+                <p><strong>Interpretando:</strong></p>
+                <ul>
+                    <li>60% dos funcion&aacute;rios julgaram razo&aacute;vel ou menos e 40% dos funcion&aacute;rios
+                        julgaram razo&aacute;vel ou mais. </li>
+                </ul>
+
+
+                <p>Para entender melhor a mat&eacute;ria, assista &agrave; v&iacute;deoaula da Professora Maria
+                    Lu&iacute;sa Cervi Uzun, em seu canal no YouTube, disponível abaixo.</p>
+                <p>Para melhor fixar a mat&eacute;ria, resolva os exerc&iacute;cios da lista preparada para esta aula,
+                    <a href="./pdf/Lista_Medidas_Separatrizes.pdf" target="_blank">clique aqui para baixar o
+                        arquivo</a>.
+                </p>
+
+                <div class="calcular">
+                    <a href="./ceDescritiva.html">
+                        <button class="button-primary" aria-placeholder="Calcular">Calcular</button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- vídeos -->
+    <div class="section categories-conteudo">
+        <div class="container">
+            <div class="row">
+                <div class="ten column videos">
+                    <div class="video-tela">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/CWVdARqguwY"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="section categories-conteudo">
+        <div class="container">
+            <div class="row">
+                <div class="ten column videos">
+                    <div class="video-tela">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/8j1u7kwpl6I"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="section categories-footer">
+        <div class="container">
+            <div class="row">
+                <div class="one-half column logof">
+                    <img src="./imagens/logo.png">
+                </div>
+
+                <div class="one-half column textof">
+                    <p>Trabalho realizado com fins educacionais. Fontes utilizadas na seção "Como foi o aprendizado?"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src='./js/calc.js' defer></script>
+    <script src='./js/chart.js@2.8.0'></script>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script src='./js/jquery-ui.js'></script>
+    <script src='./js/ajustes.js'></script>
+
+    <!-- MENU
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="./js/classie.js"></script>
+    <script src="./js/gnmenu.js"></script>
+    <script>
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
+
+</body>
+
+</html>

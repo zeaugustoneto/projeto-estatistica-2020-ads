@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <!-- METAS BÁSICAS DA PÁGINA
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Calculadora Estatística</title>
+    <meta name="description" content="Projeto de Estatística do 3º Ciclo de ADS da Fatec-Franca">
+    <meta name="author" content="Os alunos:
+    JOSE AUGUSTO SOARES DE SOUZA NETO;
+    LUÍS GUSTAVO GIANVECCHIO SANTOS;
+    MARCELO LEMOS DE MELO;
+    RAFAEL RONALD FREITAS PAULINO;
+    RAFAEL KHODOR RESENDE;
+    VINICIUS GOMES DE SOUZA.">
+
+    <!-- METAS ESPECÍFICAS PARA CELULAR
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /> -->
+
+    <!-- FONTES E ÍCONES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/fonts-googleApi-openSans.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css">
+
+    <!-- MENU
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/component.css" />
+
+    <!-- SCRIPT MENU
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="./js/modernizr.custom.js"></script>
+
+    <!-- FAVICON
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="./imagens/favicon.png">
+
+
+</head>
+
+<body class="corpo">
+
+    <!-- ESTRUTURA DE LAYOUT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- TOPO LOGO E MENU
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- <div w3-include-html="./include/topoMenu.html"></div> -->
+
+    <div class="section categories">
+
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <img src="./imagens/logo.png">
+                    <a name="topo"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MENU PRINCIPAL
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <div class="container-menu">
+        <!--barra superior do menu-->
+        <ul id="gn-menu" class="gn-menu-main">
+            <li class="gn-trigger">
+                <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+                <nav class="gn-menu-wrapper">
+                    <div class="gn-scroller">
+                        <ul class="gn-menu">
+                            <a href="login.html"><i class="material-icons">calculate</i>Calculadora</a>
+                            <a href="oquee.html"><i class="material-icons">insert_chart_outlined</i>O que é
+                                Estatística?</a>
+                            <a href="eDescritiva.html"><i class="material-icons">table_chart</i>Estatística
+                                Descritiva</a>
+                            <ul class="gn-submenu">
+                                <li>
+                                    <a href="medidaTC.html" class="submenu">Medidas de Tendêcia Central</a>
+                                </li>
+                                <li>
+                                    <a href="medidaDisp.html" class="submenu">Medidas de Dispersão</a>
+                                </li>
+                                <li>
+                                    <a href="medidaSep.html" class="submenu">Medidas Separatrizes</a>
+                                </li>
+                                <li>
+                                    <a href="distEFreq.html" class="submenu">Distribuição de Frequências</a>
+                                </li>
+                            </ul>
+                            <a href="probabilidades.html"><i class="material-icons">bar_chart</i>Distribuição de
+                                Probabilidades</a>
+                            <ul class="gn-submenu">
+                                <li>
+                                    <a href="pNormal.html" class="submenu">Distribuição Normal</a>
+                                </li>
+                                <li>
+                                    <a href="pBinomial.html" class="submenu">Distribuição Binomial</a>
+                                </li>
+                                <li>
+                                    <a href="pUniforme.html" class="submenu">Distribuição Uniforme</a>
+                                </li>
+                            </ul>
+                            <a href="correlaRegressao.html"><i class="material-icons">bubble_chart</i>Correlação de
+                                Regressão</a>
+                            <a href="como.html"><i class="material-icons">build</i>Como foi o aprendizado?</a>
+                            <a href="sobreNos.html"><i class="material-icons">groups</i>Quem somos?</a>
+                        </ul>
+                    </div>
+                </nav>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html"><span>Login</span></a></li>
+        </ul>
+
+    </div>
+
+    <!-- CONTEUDO PRINCIPAL
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- Título -->
+    <div class="section categories-titulo">
+        <div class="container">
+            <div class="row">
+                <h1 class="titulo">O QUE É ESTATÍSTICA?</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Título 2 
+    <div class="section categories-titulo2">
+        <h3 class="titulo">Sub Título</h3>
+    </div>-->
+
+    <!-- Conteúdo -->
+    <div class="section categories-conteudo">
+        <div class="container">
+            <div class="row">
+                <p><img style="display: block; margin-left: auto; margin-right: auto;"
+                        src="https://dinamicaglobal.files.wordpress.com/2012/01/statistical_page.jpg?w=1400" alt=""
+                        width="689" height="339" /></p>
+                <p>O <strong>mundo está repleto de problemas</strong> e frequentemente nos deparamos com diversas
+                    informações a respeito deles nos mais variados veículos de comunicação (jornais, rádios, programas
+                    de TV, etc).</p>
+                <p>São notícias sobre doenças, obesidades, tabagismo, criminalidades, pobreza, acidentes de trânsito,
+                    inflação, desemprego, mortalidade infantil, catástrofes, danos ambientais, aquecimento global, não
+                    reaproveitamento de resíduos, fabricação de produtos defeituosos, prejuízos nas vendas, acidentes do
+                    trabalho, etc. Para <strong>resolvermos</strong> boa parte deles <strong>precisamos</strong>
+                    <strong>reunir dados e compreendê-los</strong>, isto é, coletar informações que possam ser contadas,
+                    como peso, temperatura, preço, número de produtos defeituosos etc. <strong>É aí que entra a
+                        Estatística, pois ela se encarrega dessa árdua tarefa</strong>.</p>
+                <p>A <strong>estatística</strong> tem por objetivo <strong>coletar, organizar, analisar e interpretar as
+                        informações de um problema em estudo</strong> para, assim, auxiliar na <strong>tomada de
+                        decisão</strong>. Portanto, a estatística tem um papel fundamental na geração do conhecimento:
+                    por meio de seu uso, governos, empresas, pessoas, escolas, entidades, instituições e organizações
+                    atuam na formulação de soluções dos problemas da sociedade moderna.</p>
+                <p>Cientificamente, é <strong>difícil compreender um problema que envolve dados sem o uso da
+                        estatística</strong>, pois ela <strong>coloca ordem à desordem</strong>, <strong>projeta estudos
+                        e experimentos</strong>; coleta, organiza, resume e analisa dados; <strong>interpreta
+                        resultados</strong>, esboça conclusões e <strong>auxilia na tomada de decisão</strong>. Para
+                    desenvolver essa tarefa, a estatística se apoia na matemática e nos seus principais
+                    instrumentos:<em> tabelas, gráficos, distribuição de frequência, histogramas, médias, mediana, moda,
+                        decil, quartil, percentil, variância, amplitude total, desvio médio, desvio padrão, escore
+                        padrão, assimetria, curtose, correlação, regressão, números índice, probabilidades, amostragens
+                        e distribuições amostrais, intervalos de confiança, teste de hipóteses, estatística não
+                        paramétrica</em>, entre outros.</p>
+                <p>Se você tiver interesse em saber um pouco mais sobre estatística, leia este <strong><a
+                            href="http://www.ipardes.gov.br/ojs/index.php/revistaparanaense/article/viewFile/89/645"
+                            target="_blank" rel="nofollow">artigo</a></strong>. </p>
+
+                <p>Fonte: https://profes.com.br/aulasdeestatistica/blog/o-que-e-estatistica-para-que-serve, Prof MSc
+                    Uanderson Rebula., acessado em 23/11/2020.</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="section categories-footer">
+        <div class="container">
+            <div class="row">
+                <div class="one-half column logof">
+                    <img src="./imagens/logo.png">
+                </div>
+
+                <div class="one-half column textof">
+                    <p>Trabalho realizado com fins educacionais. Fontes utilizadas na seção "Como foi o aprendizado?"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src='./js/calc.js' defer></script>
+    <script src='./js/chart.js@2.8.0'></script>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script src='./js/jquery-ui.js'></script>
+    <script src='./js/ajustes.js'></script>
+
+    <!-- MENU
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="./js/classie.js"></script>
+    <script src="./js/gnmenu.js"></script>
+    <script>
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
+
+</body>
+
+</html>

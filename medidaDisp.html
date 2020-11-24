@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <!-- METAS BÁSICAS DA PÁGINA
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Calculadora Estatística</title>
+    <meta name="description" content="Projeto de Estatística do 3º Ciclo de ADS da Fatec-Franca">
+    <meta name="author" content="Os alunos:
+    JOSE AUGUSTO SOARES DE SOUZA NETO;
+    LUÍS GUSTAVO GIANVECCHIO SANTOS;
+    MARCELO LEMOS DE MELO;
+    RAFAEL RONALD FREITAS PAULINO;
+    RAFAEL KHODOR RESENDE;
+    VINICIUS GOMES DE SOUZA.">
+
+    <!-- METAS ESPECÍFICAS PARA CELULAR
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /> -->
+
+    <!-- FONTES E ÍCONES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/fonts-googleApi-openSans.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css">
+
+    <!-- MENU
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="./css/component.css" />
+
+    <!-- SCRIPT MENU
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="./js/modernizr.custom.js"></script>
+
+    <!-- FAVICON
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="./imagens/favicon.png">
+
+
+</head>
+
+<body class="corpo">
+
+    <!-- ESTRUTURA DE LAYOUT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- TOPO LOGO E MENU
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- <div w3-include-html="./include/topoMenu.html"></div> -->
+
+    <div class="section categories">
+
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <img src="./imagens/logo.png">
+                    <a name="topo"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MENU PRINCIPAL
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <div class="container-menu">
+        <!--barra superior do menu-->
+        <ul id="gn-menu" class="gn-menu-main">
+            <li class="gn-trigger">
+                <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+                <nav class="gn-menu-wrapper">
+                    <div class="gn-scroller">
+                        <ul class="gn-menu">
+                            <a href="login.html"><i class="material-icons">calculate</i>Calculadora</a>
+                            <a href="oquee.html"><i class="material-icons">insert_chart_outlined</i>O que é
+                                Estatística?</a>
+                            <a href="eDescritiva.html"><i class="material-icons">table_chart</i>Estatística
+                                Descritiva</a>
+                            <ul class="gn-submenu">
+                                <li>
+                                    <a href="medidaTC.html" class="submenu">Medidas de Tendêcia Central</a>
+                                </li>
+                                <li>
+                                    <a href="medidaDisp.html" class="submenu">Medidas de Dispersão</a>
+                                </li>
+                                <li>
+                                    <a href="medidaSep.html" class="submenu">Medidas Separatrizes</a>
+                                </li>
+                                <li>
+                                    <a href="distEFreq.html" class="submenu">Distribuição de Frequências</a>
+                                </li>
+                            </ul>
+                            <a href="probabilidades.html"><i class="material-icons">bar_chart</i>Distribuição de
+                                Probabilidades</a>
+                            <ul class="gn-submenu">
+                                <li>
+                                    <a href="pNormal.html" class="submenu">Distribuição Normal</a>
+                                </li>
+                                <li>
+                                    <a href="pBinomial.html" class="submenu">Distribuição Binomial</a>
+                                </li>
+                                <li>
+                                    <a href="pUniforme.html" class="submenu">Distribuição Uniforme</a>
+                                </li>
+                            </ul>
+                            <a href="correlaRegressao.html"><i class="material-icons">bubble_chart</i>Correlação de
+                                Regressão</a>
+                            <a href="como.html"><i class="material-icons">build</i>Como foi o aprendizado?</a>
+                            <a href="sobreNos.html"><i class="material-icons">groups</i>Quem somos?</a>
+                        </ul>
+                    </div>
+                </nav>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html"><span>Login</span></a></li>
+        </ul>
+
+    </div>
+
+    <!-- CONTEUDO PRINCIPAL
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- Título -->
+    <div class="section categories-titulo">
+        <div class="container">
+            <div class="row">
+                <h1 class="titulo">MEDIDAS DE DISPERSÃO.</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Título 2 -->
+    <div class="section categories-titulo2">
+        <h3 class="titulo">Variância e Desvio Padrão.</h3>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="section categories-conteudo">
+        <div class="container">
+            <div class="row">
+                <p><strong>Qual a defini&ccedil;&atilde;o das Medidas de Dispers&atilde;o?</strong></p>
+                <p>&Eacute; o risco - a probabilidade de ocorr&ecirc;ncia de determinados resultados em
+                    rela&ccedil;&atilde;o a um valor m&eacute;dio esperado. &Eacute; um conceito voltado para o futuro
+                    que nos traz a ideia de perda.</p>
+                <ul>
+                    <li>&eacute; um par&acirc;metro que indica o grau de varia&ccedil;&atilde;o de um conjuntos de
+                        elementos em torno da m&eacute;dia;</li>
+                    <li>o Desvio Padr&atilde;o serve para medir a dispers&atilde;o dos seus dados. Ele &eacute; ainda
+                        uma estat&iacute;stica que mede o quanto seus dados se afastam da m&eacute;dia;</li>
+                    <li>quanto mais os dados est&atilde;o afastados da m&eacute;dia, pior &eacute;;</li>
+                    <li>quanto maior o Coeficiente de Varia&ccedil;&atilde;o, pior &eacute;. </li>
+                </ul>
+                <p>H&aacute; quatro medidas de dispers&atilde;o:</p>
+                <ul>
+                    <li>Amplitude Total;</li>
+                    <li>Desvio M&eacute;dio Simples;</li>
+                    <li><strong>Vari&acirc;ncia; e</strong></li>
+                    <li><strong>Desvio Padr&atilde;o (DP);</strong></li>
+                </ul>
+                <p>Aqui ser&atilde;o abordados os dois &uacute;ltimos. O DP &eacute; a raiz quadrada da Vari&acirc;ncia,
+                    ent&atilde;o para encontrarmos o DP, precisaremos encontrar primeiro a Vari&acirc;ncia.</p>
+                <p>Desvio Padr&atilde;o quando tratamos de uma popula&ccedil;&atilde;o:</p>
+                <p><strong>&#977; = &radic;&#8721;(xi - x)<sup>2</sup> * fi / &#8721;fi</strong></p>
+                <p>Desvio Padr&atilde;o quando tratamos de uma amostra:</p>
+                <p><strong>&#977; = &radic;&#8721;(xi - x)<sup>2</sup> * fi / &#8721;fi <span style="color: #FF0000">-
+                            1</span> </strong></p>
+                <p>A diferen&ccedil;a nos dois casos &eacute; que na popula&ccedil;&atilde;o o conte&uacute;do dentro da
+                    raiz &eacute; dividido por <strong>&#8721;fi</strong>, j&aacute; na amostra &eacute; dividido por
+                    <strong>&#8721;fi - 1</strong>.</p>
+                <p>E a &uacute;ltima f&oacute;rmula que precisaremos &eacute; o Coeficiente de Varia&ccedil;&atilde;o,
+                    que &eacute; o DP em forma de porcentagem:</p>
+                <p><strong>CV = s / <span style="text-decoration: overline">x</span> </strong>; o mesmo que CV = DP /
+                    M&eacute;dia * 100 </p>
+                <p>Que &eacute; o DP dividido pela M&eacute;dia * 100. Essa f&oacute;rmula vai nos ajudar a interpretar
+                    o DP.</p>
+                <ul>
+                    <ul>
+                        <li><strong>Observa&ccedil;&atilde;o:</strong>
+                            <ul>
+                                <li>A Vari&acirc;ncia e o Desvio Padr&atilde;o somente s&atilde;o calculados em
+                                    Vari&aacute;veis Quantitativas. </li>
+                                <li>M&eacute;dia = (fi * PMIC) + (fi * PMIC)...+ (fi * PMIC) / fi(total)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </ul>
+                <p><strong>Exemplo:</strong></p>
+                <p>O propriet&aacute;rio de uma determinada empresa quer informa&ccedil;&otilde;es sobre as vendas de
+                    suas filiais. Sendo assim, a tabela abaixo apresenta o registro das vendas (em quantidade de
+                    pe&ccedil;as) de uma semana de trabalho de suas 3 filiais. </p>
+                <p align="center"><img src="./imagens/medidasVDP.jpg" alt="Tabela de Registro de Vendas" width="716"
+                        height="112" /></p>
+                <ul>
+                    <li>Primeiramente, calculou-se a m&eacute;dia aritm&eacute;tica simpes, a partir desse
+                        c&aacute;lculo tem-se a venda m&eacute;dia semanal de cada filial e, a princ&iacute;pio a filial
+                        C teve a melhor m&eacute;dia de vendas, no entanto, h&aacute; uma grande varia&ccedil;&atilde;o
+                        entre as vendas de cada filial, sendo necess&aacute;rio encontrar tamb&eacute;m o valor do
+                        desvio padr&atilde;o e , posteriormente o Coeficiente de Varia&ccedil;&atilde;o para verificar o
+                        prop&oacute;sito desta empresa. </li>
+                    <li>Atrav&eacute;s do c&aacute;lculo do DP e do CV percebe-se que a filial A foi a que apresentou
+                        menor varia&ccedil;&atilde;o nas vendas desta semana analisada. Est&aacute; filial ent&atilde;o
+                        &eacute; que teve melhor desempenho.</li>
+                </ul>
+                <p><strong>A - Vari&aacute;vel Quantitativa Discreta (Vari&acirc;ncia e Desvio Padr&atilde;o)</strong>
+                </p>
+                <ul>
+                    <li><strong>Popula&ccedil;&atilde;o</strong>:
+                        <ul>
+                            <li>Calcule a Vari&acirc;ncia e o Desvio Padr&atilde;o da distribui&ccedil;&atilde;o abaixo,
+                                representativa de uma POPULA&Ccedil;&Atilde;O, sobre as faltas anuais de 10
+                                funcion&aacute;rios.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p align="center"><img src="./imagens/medidasVDP-quantiD.jpg" alt="Tabela" width="184" height="177" />
+                </p>
+                <p>M&eacute;dia = (1 * 3 + 2 * 5 + 3 * 2) / 10 = 1,9</p>
+                <p>Desvio Padr&atilde;o &gt;&gt; <strong>&#977; = &radic;&#8721;(xi - x)<sup>2</sup> * fi /
+                        &#8721;fi</strong> </p>
+                <p><strong>&#977; = &radic;(</strong>(1 - 1,9)<sup>2</sup> * 3 + (2 - 1,9)<sup>2</sup> * 5 + (3 -
+                    1,9)<sup>2</sup> * 2) / 10 = <strong>&radic;</strong>(2,43 + 0,05 + 2,42) / 10 =
+                    <strong>&radic;</strong>0,49 = <strong>0,7 (DP)</strong></p>
+                <p><strong>CV = DP / M&eacute;dia * 100</strong>, ou seja, (0,7 / 1,9) * 100 = <strong>37%</strong></p>
+                <ul>
+                    <li><strong>Amostra</strong>:
+                        <ul>
+                            <li>Calcule a Vari&acirc;ncia e o Desvio Padr&atilde;o da distribui&ccedil;&atilde;o abaixo,
+                                representativa de uma AMOSTRA, sobre as faltas anuais de 10 funcion&aacute;rios.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>M&eacute;dia = (1 * 3 + 2 * 5 + 3 * 2) / 10 = <strong>1,9</strong></p>
+                <p>Desvio Padr&atilde;o &gt;&gt; <strong>&#977; = &radic;&#8721;(xi - x)<sup>2</sup> * fi / &#8721;fi
+                        <span style="color: #FF0000">- 1</span></strong></p>
+                <p><strong>&#977; = &radic;(</strong>(1 - 1,9)<sup>2</sup> * 3 + (2 - 1,9)<sup>2</sup> * 5 + (3 -
+                    1,9)<sup>2</sup> * 2) / 10 - 1 = <strong>&radic;</strong>(2,43 + 0,05 + 2,42) / 9 =
+                    <strong>&radic;0,54 (Vari&acirc;ncia) </strong> = <strong>0,74 (DP)</strong></p>
+                <p><strong>CV = DP / M&eacute;dia * 100</strong>, ou seja, (0,74 / 1,9) * 100 = <strong>38%</strong></p>
+                <p><strong>B - Vari&aacute;vel Quantitativa Cont&iacute;nua (Vari&acirc;ncia e Desvio
+                        Padr&atilde;o)</strong></p>
+                <ul>
+                    <li><strong>Popula&ccedil;&atilde;o</strong>:
+                        <ul>
+                            <li>Calcule a Vari&acirc;ncia e o Desvio Padr&atilde;o da distribui&ccedil;&atilde;o abaixo,
+                                representativa de uma POPULA&Ccedil;&Atilde;O, sobre as horas-extras, trabalhadas
+                                semanalmente, de 20 funcion&aacute;rios de uma determinada empresa.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p align="center"><img src="./imagens/medidasVDP-quantiC.jpg" alt="Tabela" width="319" height="239" />
+                </p>
+                <p>As f&oacute;rmulas nas Vari&aacute;veis Quatitativas Discreta e Cont&iacute;nua s&atilde;o as mesmas,
+                    entretanto na Cont&iacute;nua eu preciso primeiro encontrar o Ponto M&eacute;dio do Intervalo de
+                    Classe(IC).</p>
+                <p>Ponto M&eacute;dio do IC = (Vmin + Vmax) / 2, como por exemplo na primeira classe da tabela acima, (2
+                    + 4) / 2 = 3 </p>
+                <p>M&eacute;dia = (3 * 5 + 5 * 6 + 7* 9) / 20 = 108 / 20 = <strong>5,4</strong></p>
+                <p><strong>&#977; = &radic;(</strong>(3 - 5,4)<sup>2</sup> * 5 + (5 - 5,4)<sup>2</sup> * 6 + (7 -
+                    5,4)<sup>2</sup> * 9) / 20 = <strong>&radic;</strong>(28,8 + 0,96 + 23,04) / 20 =
+                    <strong>&radic;2,64 (Vari&acirc;ncia) </strong> = <strong>1,62 (DP)<br />
+                    </strong>* como j&aacute; dito, o DP &eacute; o resultado da raiz quadrada da Vari&acirc;ncia. </p>
+                <p><strong>CV = DP / M&eacute;dia * 100</strong>, ou seja, (1,62 / 5,4) * 100 = <strong>30%</strong>
+                </p>
+                <p><strong>Interpretando:</strong></p>
+                <ul>
+                    <li>os valores se dispersam da m&eacute;dia 5,4 por 1,62 unidades, ou seja, os funcion&aacute;rios
+                        que trabalharam de 3,78 a 7,02 horas-extras (3,78 &lt; <strong>5,4</strong> &lt; 7,02 | 1,62 se
+                        distanciando da M&eacute;dia para mais ou para menos) em uma determinada semana, encontraram-se
+                        dentro da zona de normalidade.</li>
+                </ul>
+                <p>O que n&atilde;o &eacute; um bom resultado (30%), lembrando que quanto mais os dados se afastam da
+                    m&eacute;dia pior &eacute; o resultado, e quanto mais se aproximam da m&eacute;dia, melhor o
+                    resultado.</p>
+
+                <p>Para entender melhor a mat&eacute;ria, assista &agrave; v&iacute;deoaula da Professora Maria
+                    Lu&iacute;sa Cervi Uzun, em seu canal no YouTube, disponível abaixo.</p>
+                <p>Para melhor fixar a mat&eacute;ria, resolva os exerc&iacute;cios da lista preparada para esta aula,
+                    <a href="./pdf/Lista7_MD-VDP.pdf" target="_blank">clique aqui para baixar o arquivo</a>.
+                </p>
+
+                <p>
+                    ****terminar****
+                </p>
+
+                <div class="calcular">
+                    <a href="./ceDescritiva.html">
+                        <button class="button-primary" aria-placeholder="Calcular">Calcular</button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- vídeos -->
+    <div class="section categories-conteudo">
+        <div class="container">
+            <div class="row">
+                <div class="ten column videos">
+                    <div class="video-tela">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/oZyRUTYyluw"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="section categories-conteudo">
+        <div class="container">
+            <div class="row">
+                <div class="ten column videos">
+                    <div class="video-tela">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/oZyRUTYyluw"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="section categories-footer">
+        <div class="container">
+            <div class="row">
+                <div class="one-half column logof">
+                    <img src="./imagens/logo.png">
+                </div>
+
+                <div class="one-half column textof">
+                    <p>Trabalho realizado com fins educacionais. Fontes utilizadas na seção
+                        "Como foi o
+                        aprendizado?"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src='./js/calc.js' defer></script>
+    <script src='./js/chart.js@2.8.0'></script>
+    <script src='./js/jquery-1.12.4.js'></script>
+    <script src='./js/jquery-ui.js'></script>
+    <script src='./js/ajustes.js'></script>
+
+    <!-- MENU
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="./js/classie.js"></script>
+    <script src="./js/gnmenu.js"></script>
+    <script>
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
+
+</body>
+
+</html>
